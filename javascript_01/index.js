@@ -30,9 +30,81 @@ var user_01 = [
         email: 'maria_zb@gmail.com', 
         birthday: '23/04/92',
         age: '27',
-        hobbies: ['estudiar','hacer ejercicio']
+        hobbies: ['estudiar','hacer ejercicio'],
+        family:
+        [
+            {
+                rol: 'mather',
+                name: 'Claudia',
+            },
+            {
+                rol: 'father',
+                name: 'Carlos',
+            },
+            {
+                rol: 'brothers',
+                name: 'Daniel',
+            },
+            {
+                rol: 'sisters',
+                name: ['Natalia','Sofia'],
+            }
+        ],
     },
-]
 
-console.log(user_01);
+    {
+        name: 'Federico',
+        lastname: 'Soria',
+        email: 'lfede.soria@gmail.com',
+        birthday: '02/02/89',
+        age: '30',
+        hobbies: ['treking', 'padel'],
+        family:
+        [
+            {
+                rol: 'father',
+                name: 'Luis',
+            },
+            {
+                rol: 'mather',
+                name: 'Susana',
+            },
+            {
+                rol: 'brother',
+                name: 'Joquin',
+            },
+        ],
+
+    },
+
+    {
+        name: 'Susana',
+        lastname: 'rodriguez',
+        email: 'susi_rodriguez@gmail.com',
+        birthday: '03/07/59',
+        age: '60',
+        hobbies: 'listen to music',
+        family: 
+        [
+            {
+                rol: 'husband',
+                name:'Luis',
+            },
+            {
+                rol:'sons',
+                name: ['federico','joaquin']
+            },
+        ]
+    }
+
+];
+
+for (var i = 0; i < user_01.length; i++) {
+    console.log('Familiares de', user_01[i].name);
+    for (var j = 0; j <user_01[i].family.length; j++){
+        console.log(user_01[i].family[j].name,'is the',user_01[i].family[j].rol);
+
+        
+    }
+}
 
